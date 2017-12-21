@@ -1,0 +1,17 @@
+spring:
+  application:
+    name: dataplatform-buyer
+  profiles: default
+
+server:
+  port: 9001
+
+eureka:
+  instance:
+    instance-id: ${spring.application.name}:${server.port}
+  client:
+    service-url:
+      default-zone: http://localhost:8761/
+rabbitmq:
+    host: localhost
+    port: 5762
